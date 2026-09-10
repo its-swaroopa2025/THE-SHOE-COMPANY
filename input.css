@@ -1,0 +1,13 @@
+
+
+
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+
+.section-container{
+    @apply px-16 md:px-12 max-w-[1440px] mx-auto
+}
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap');
