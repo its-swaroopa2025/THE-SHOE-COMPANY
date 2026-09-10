@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Shoe Company</title>
     <link rel="stylesheet" href="output.css" />
+    <script src="script.js" defer></script>
   </head>
   <body class="bg-black text-white font-archivo">
     <header
-      class="section-container flex items-center justify-between fixed w-full left-[50%] -translate-x-[50%] bg-black/70 backdrop-blur-sm z-10"
+      class="section-container open-menu flex items-center justify-between fixed w-full left-[50%] -translate-x-[50%] bg-black/70 backdrop-blur-sm z-10"
     >
       <a href="#">
         <img class="w-24 md:w-32" src="/images/logo1.png" alt="logo" />
@@ -21,7 +22,9 @@
         <a class="font-bold" href="#testimonials">Testimonials</a>
         <a class="font-bold" href="#contact">Contact Us</a>
       </nav>
-      <button class="text-5xl md:hidden">≡</button>
+      <button id="btn" class="text-5xl md:hidden open-menu:bg-red-500">
+        ≡
+      </button>
     </header>
     <section
       id="hero"
