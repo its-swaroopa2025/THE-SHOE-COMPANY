@@ -1,0 +1,86 @@
+.mobile-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100dvh;
+        width: 70%;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        padding: 5.5rem 2rem 2.5rem;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.97);
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.5);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 20;
+      }
+
+      .mobile-nav.open-menu {
+        transform: translateX(0);
+      }
+
+      /* Dim the rest of the page behind the drawer while it's open */
+      .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 15;
+      }
+
+      .menu-overlay.open-menu {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      @media (min-width: 768px) {
+        .mobile-nav {
+          position: static;
+          inset: auto;
+          top: auto;
+          right: auto;
+          bottom: auto;
+          height: auto;
+          width: auto;
+          max-width: none;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 1.5rem;
+          padding: 0;
+          overflow: visible;
+          background-color: transparent;
+          box-shadow: none;
+          transform: none;
+          transition: none;
+          z-index: auto;
+        }
+
+        .menu-overlay {
+          display: none;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .mobile-nav {
+          gap: 2rem;
+        }
+      }
+
+      .nav-link {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+      }
+
+      @media (min-width: 768px) {
+        .nav-link {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
